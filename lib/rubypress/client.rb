@@ -49,7 +49,8 @@ module Rubypress
     end
 
     def self.default
-      self.new(:host => ENV['WORDPRESS_HOST'], :port => 80, :username => ENV['WORDPRESS_USERNAME'], :password => ENV['WORDPRESS_PASSWORD'], :use_ssl => false)
+      use_ssl = ENV['WORDPRESS_USE_SSL'] == 'true'
+      self.new(:host => ENV['WORDPRESS_HOST'], :port => ENV['WORDPRESS_PORT'].to_i, :username => ENV['WORDPRESS_USERNAME'], :password => ENV['WORDPRESS_PASSWORD'], :use_ssl => use_ssl)
     end
 
     def execute(method, options)

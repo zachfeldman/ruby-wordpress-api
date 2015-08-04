@@ -90,4 +90,14 @@ describe "#client" do
     expect( conn.password.nil? ).to be false
 
   end
+
+  it ".default initializes client with environment variables" do
+    client = Rubypress::Client.default
+
+    expect(client.host).to eq ENV["WORDPRESS_HOST"]
+    expect(client.port).to eq ENV["WORDPRESS_PORT"].to_i
+    expect(client.username).to eq ENV["WORDPRESS_USERNAME"]
+    expect(client.password).to eq ENV["WORDPRESS_PASSWORD"]
+    expect(client.use_ssl).to eq true
+  end
 end

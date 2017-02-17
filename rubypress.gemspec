@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.files += Dir['lib/rubypress/**']
 
   s.add_dependency 'retryable-rb'
+  s.add_dependency 'xmlrpc'
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rdoc'

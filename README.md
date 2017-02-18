@@ -192,7 +192,7 @@ variable names include `HTTP_` and can be set to the same or different values as
 * Carlos Pérez Cerrato [@lastko](https://github.com/lastko) (Caught Errno::EPIPE: Broken pipe errors)
 * Eric Gascoine [@ericgascoine](https://github.com/ericgascoine) (Fixed getPostStatusList)
 * Matt Colyer [@mcoyler](https://github.com/mcolyer) (Added configurable timeouts)
-* Karim Naufal [@mcoyler](https://github.com/rimkashox) (Added support for Ruby >= 2.4.0)
+* Karim Naufal [@rimkashox](https://github.com/rimkashox) (Added support for Ruby >= 2.4.0)
 
 ## License
 

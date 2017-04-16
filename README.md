@@ -106,6 +106,16 @@ Use a non-default ssl port of your choosing (must be setup on your server correc
                                :password => "yourwordpresspassword",
                                :use_ssl => true,
                                :ssl_port => 995)
+### Upload file
+
+```ruby
+	FILENAME='myFile.png'
+	wp.uploadFile(:data => {
+		:name => FILENAME,
+		:type => MIME::Types.type_for(FILENAME).first.to_s,
+		:bits => XMLRPC::Base64.new(IO.read(FILENAME))
+	})
+```
 
 ### Uploading a file
 
@@ -119,6 +129,8 @@ wp.uploadFile(:data => {
 ```
 
 To make further requests, check out the documentation - this gem should follow the exact format of the [WordPress XML RPC API](http://codex.wordpress.org/XML-RPC_WordPress_API). For even further clarification on what requests are available, take a look in the spec folder.
+
+
 
 ## Contributing to rubypress
 
